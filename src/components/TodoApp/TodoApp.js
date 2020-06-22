@@ -2,11 +2,18 @@ import React, { Component } from "react";
 import "./TodoApp.css";
 
 export default class TodoApp extends Component {
-  state = {
-    input: "",
-    items: [],
-    editItemKey: -1,
-  };
+  constructor(props) {
+    super(props);
+    this.textBox = React.createRef();
+
+    this.state = {
+      input: "",
+      items: [],
+      editItemKey: -1,
+    };
+
+    this.myInput = React.createRef();
+  }
 
   handleChange = (e) => {
     this.setState({ input: e.target.value });
@@ -31,6 +38,7 @@ export default class TodoApp extends Component {
         input: "",
         editItemKey: -1,
       });
+
     } else {
       this.setState({
         items: [...this.state.items, input], //advanced_concept: spread operator : will push input to items

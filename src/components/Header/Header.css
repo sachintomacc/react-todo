@@ -1,0 +1,18 @@
+header{
+background-color:silver;
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+header a {
+color: #ececec;
+text-decoration: none;
+margin: 0 40px;
+font-weight: bold;
+
+
+}
